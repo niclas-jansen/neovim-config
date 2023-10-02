@@ -1,8 +1,13 @@
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
+local mark, ui
+if (pcall(require, "harpoon")) then 
+  mark = require("harpoon.mark")
+  ui = require("harpoon.ui")
+else
+  return
+end
 
 vim.keymap.set("n", "<leader>a", mark.add_file, {desc= "add harpoon mark"})
-vim.keymap.set("n", "<leader>f", ui.toggle_quick_menu, {desc= 'open harpoon'})
+vim.keymap.set("n", "<leader>h", ui.toggle_quick_menu, {desc= 'open harpoon'})
 
 local keymap = "qwerty"
 
