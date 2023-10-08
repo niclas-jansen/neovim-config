@@ -1,5 +1,6 @@
 return {
   "folke/trouble.nvim",
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
     local trouble = require("trouble")
     vim.keymap.set("n", "<leader>fq", function() trouble.open("quickfix") end, {desc="Trouble Quickfix", silent=true, noremap=true})

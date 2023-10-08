@@ -1,5 +1,6 @@
 return {
   "folke/which-key.nvim",
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
     vim.o.timeout = true
     vim.o.timeoutlen = 300
