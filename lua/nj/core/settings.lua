@@ -1,4 +1,6 @@
 vim.opt.nu = true -- line numbers
+vim.opt.cursorline = true -- cursor line highlighting 
+vim.opt.cursorlineopt = "number" -- curo line highlighting type
 vim.opt.relativenumber = true -- relative line numbers
 
 -- vim.opt.tabstop = 4
