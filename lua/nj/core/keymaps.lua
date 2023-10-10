@@ -20,6 +20,6 @@ vim.keymap.set({ "n", "v" }, "<leader>v", [["+p]], { desc = "paste from clipboar
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
-vim.keymap.set("n", "<leader>/", vim.cmd.nohlsearch)
+vim.keymap.set("n", "<leader>/", vim.cmd.nohlsearch, {desc = "Search: Clear Highlighting"})
 
-vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, {desc = "Format: File"})
