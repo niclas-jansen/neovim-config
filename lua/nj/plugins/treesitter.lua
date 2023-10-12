@@ -1,7 +1,10 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   event = { "BufReadPre", "BufNewFile" },
-  dependencies = { "nvim-treesitter/nvim-treesitter-context" },
+  dependencies = { 
+    "nvim-treesitter/nvim-treesitter-context",
+    "nvim-treesitter/nvim-treesitter-textobjects"
+  },
   config = function()
     require 'nvim-treesitter.configs'.setup {
       -- A list of parser names, or "all" (the five listed parsers should always be installed)
