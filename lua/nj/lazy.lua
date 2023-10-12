@@ -14,13 +14,13 @@ vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
 
-require("lazy").setup("nj/plugins", {
+require("lazy").setup({{import = "nj.plugins"}, {import = "nj.plugins.ai"},{import = "nj.plugins.lsp"}}, {
   install = {
     colorscheme = {"catppuccin"},
   },
   checker = {
     enabled = true,
-    notify = true
+    notify = false,
   },
   change_detection = {
     notify = false
