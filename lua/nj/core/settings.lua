@@ -1,5 +1,5 @@
 vim.opt.nu = true -- line numbers
-vim.opt.cursorline = true -- cursor line highlighting 
+vim.opt.cursorline = true -- cursor line highlighting
 vim.opt.cursorlineopt = "number" -- curo line highlighting type
 vim.opt.relativenumber = true -- relative line numbers
 
@@ -43,3 +43,10 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 -- vim.opt.colorcolumn = "80"
+--
+--
+
+vim.opt.spelllang = {
+	"en_us",
+	"en_gb",
+}
