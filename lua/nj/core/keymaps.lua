@@ -1,30 +1,37 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>f", "", { desc = "+filetest" })
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "exit file" })
+local keymap = vim.keymap
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "move highlighted lines DOWN" })
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "move highlighted lines UP" })
+keymap.set("n", "<leader>f", "", { desc = "+filetest" })
+keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "exit file" })
 
-vim.keymap.set("x", "<leader>pp", [["_dP]], { desc = "paste without replacing buffer" })
+keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "move highlighted lines DOWN" })
+keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "move highlighted lines UP" })
+
+keymap.set("x", "<leader>pp", [["_dP]], { desc = "paste without replacing buffer" })
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "yank to clipboard" })
-vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "yank line to clipboard" })
+keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "yank to clipboard" })
+keymap.set("n", "<leader>Y", [["+Y]], { desc = "yank line to clipboard" })
 
-vim.keymap.set({ "n", "v" }, "<leader>v", [["+p]], { desc = "paste from clipboard" })
+keymap.set({ "n", "v" }, "<leader>v", [["+p]], { desc = "paste from clipboard" })
 
 -- quick fix navigation
--- vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
--- vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+-- keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+-- keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
+keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
-vim.keymap.set("n", "<leader>/", vim.cmd.nohlsearch, { desc = "Search: Clear Highlighting" })
+keymap.set("n", "<leader>/", vim.cmd.nohlsearch, { desc = "Search: Clear Highlighting" })
 
-vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, { desc = "Format: File" })
+keymap.set("n", "<leader>ff", vim.lsp.buf.format, { desc = "Format: File" })
 
-vim.keymap.set("n", "<leader>s", function()
+
+keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
+keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
+keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
+
+keymap.set("n", "<leader>ss", function()
 	if vim.opt.spell:get() == true then
 		vim.opt.spell = false
 		print("spelling DISABLED")
