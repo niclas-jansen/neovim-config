@@ -5,6 +5,7 @@ return {
   dependencies = {
     { "hrsh7th/cmp-buffer" },
     { "hrsh7th/cmp-path" },
+    { "hrsh7th/cmp-nvim-lua" },
     { "L3MON4D3/LuaSnip",            build = "make install_jsregexp" },           -- Required
     { "saadparwaiz1/cmp_luasnip" },
     { "rafamadriz/friendly-snippets" },
@@ -40,6 +41,7 @@ return {
         {name = "luasnip"}, -- snippets
         {name = "buffer"}, -- text within current buffer
         {name = "path"}, -- file system paths
+        {name = "nvim_lua"}, -- nvim api functions
         {name = "spell", option = {
           keep_all_entries = false,
           enable_in_context = function()
