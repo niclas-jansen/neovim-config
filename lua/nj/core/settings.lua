@@ -49,4 +49,14 @@ vim.opt.updatetime = 50
 vim.opt.spelllang = {
 	"en_us",
 	"en_gb",
+	-- "de_de",
 }
+
+vim.opt.spell = true
+
+
+vim.opt.conceallevel = 1
+
+-- change shell title
+vim.opt.title = true;
+vim.opt.titlestring = [[%t – %{fnamemodify(getcwd(), ':t')}]];

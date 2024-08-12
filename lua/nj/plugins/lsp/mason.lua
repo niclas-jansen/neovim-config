@@ -19,6 +19,7 @@ return {
 				--   package_installed = ""
 				-- }
 			},
+      PATH = "prepend", -- "skip" seems to cause the spawning error
 		})
 
 		mason_lspconfig.setup({
@@ -33,8 +34,9 @@ return {
 				"tailwindcss",
 				"svelte",
 				"graphql",
-				"emmet_ls",
+				-- "emmet_ls",
 				"prismals",
+        "emmet_language_server",
 
 				"rust_analyzer",
 			},
@@ -45,6 +47,7 @@ return {
 		mason_tool_installer.setup({
 			ensure_installed = {
 				"prettierd",
+				"prettier",
 				"stylua",
 				-- "isort",
 				-- "black",

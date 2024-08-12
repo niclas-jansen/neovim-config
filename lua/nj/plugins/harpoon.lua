@@ -28,7 +28,7 @@ return {
     { desc = "Open harpoon window" })
     -- ------------
 
-    vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end, { desc = "Harpoon: add mark" })
+    vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end, { desc = "Harpoon: add mark" })
     vim.keymap.set("n", "<leader>h", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = 'Harpoon: open list' })
 
     vim.keymap.set("n", "<c-j>", function() harpoon:list():select(1) end, {desc = "harpoon: Goto 1"})

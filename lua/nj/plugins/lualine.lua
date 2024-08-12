@@ -254,6 +254,20 @@ local evil = {
       color = { fg = '#ffffff', gui = 'bold' },
     }
 
+    ins_left {
+      -- Lsp server name .
+      function ()
+          local linters = require("lint").get_running()
+          if #linters == 0 then
+            return "󰦕"
+          end
+          return "󱉶 " .. table.concat(linters, ", ")
+      end,
+       
+      icon = ' LINT:',
+      color = { fg = '#ffffff', gui = 'bold' },
+    }
+
     -- Add components to right sections
     ins_right {
       'o:encoding',       -- option component same as &encoding in viml

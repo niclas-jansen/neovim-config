@@ -3,9 +3,11 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   dependencies = { 
     "nvim-treesitter/nvim-treesitter-context",
-    "nvim-treesitter/nvim-treesitter-textobjects"
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    "nvim-treesitter/playground"
   },
   config = function()
+    require('nvim-treesitter.install').compilers = { "gcc" }
     require 'nvim-treesitter.configs'.setup {
       -- A list of parser names, or "all" (the five listed parsers should always be installed)
       ensure_installed = { "vimdoc", "javascript", "typescript", "c", "lua", "vim", "vimdoc", "query" },

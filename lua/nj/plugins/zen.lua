@@ -4,6 +4,8 @@ return {
   config = function() 
     local zen = require("true-zen")
     local keymap = vim.keymap
+
+    keymap.set("n", "<leader>z", "", { desc = "+zen" })
     keymap.set("n", "<leader>zn", zen.ataraxis, {desc="Zen: Ataraxis"})
     keymap.set("v", "<leader>zn", function() 
       local first = vim.fn.line('v')

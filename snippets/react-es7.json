@@ -1,0 +1,72 @@
+{
+  "reactArrowFunctionComponent": {
+    "prefix": "lol",
+    "body": [
+      "export const ${1:${TM_FILENAME_BASE}} = () => {",
+        "  return (",
+          "    <div>${1:first}</div>",
+          "  )",
+          "}",
+          ""
+    ],
+    "description": "Creates a React Arrow Function Component with ES7 module system",
+    "luasnip": {
+      "priority": 501
+    }
+  },
+  "reactArrowFunctionComponentWithPropTypes": {
+    "prefix": "rafcp",
+    "body": [
+      "import PropTypes from 'prop-types'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = props => {",
+        "  return (",
+          "    <div>${1:first}</div>",
+          "  )",
+          "}",
+          "",
+          "${1:${TM_FILENAME_BASE}}.propTypes = {}",
+          "",
+          "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Creates a React Arrow Function Component with ES7 module system with PropTypes",
+    "luasnip": {
+      "priority": 501
+    }
+  },
+  "reactArrowFunctionExportComponent": {
+    "prefix": "rafce",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+        "  return (",
+          "    <div>${1:first}</div>",
+          "  )",
+          "}",
+          "",
+          "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Creates a React Arrow Function Component with ES7 module system",
+    "luasnip": {
+      "priority": 501
+    }
+  },
+  "reactClassComponent": {
+    "prefix": "rcc",
+    "body": [
+      "import { Component } from 'react'",
+      "",
+      "export default class ${1:${TM_FILENAME_BASE}} extends Component {",
+        "  render() {",
+          "    return (",
+            "      <div>${1:first}</div>",
+            "    )",
+            "  }",
+            "}",
+            ""
+    ],
+    "description": "Creates a React component class with ES7 module system",
+    "luasnip": {
+      "priority": 501
+    }
+  },
+}

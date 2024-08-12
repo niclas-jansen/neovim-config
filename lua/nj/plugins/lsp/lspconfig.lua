@@ -4,6 +4,7 @@ return {
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
+    {"folke/neodev.nvim", opts= {}},
   },
   config = function()
     -- import lspconfig plugin
@@ -127,14 +128,20 @@ return {
     })
 
     -- configure emmet language server
-    lspconfig["emmet_ls"].setup({
+    -- lspconfig["emmet_ls"].setup({
+    --   capabilities = capabilities,
+    --   on_attach = on_attach,
+    --   filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+    -- })
+
+    lspconfig["emmet_language_server"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
       filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
     })
 
     -- configure python server
-    lspconfig["pyright"].setup({
+    lspconfig["basedpyright"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })

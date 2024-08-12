@@ -2,7 +2,13 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("n", "<leader>f", "", { desc = "+filetest" })
+keymap.set("n", "<leader>f", "", { desc = "+file" })
+keymap.set("n", "<leader>m", "", { desc = "+make" })
+keymap.set("n", "<leader>p", "", { desc = "+pallet" })
+keymap.set("n", "<leader>r", "", { desc = "+refactor" })
+keymap.set("n", "<leader>s", "", { desc = "+split" })
+keymap.set("n", "<leader>g", "", { desc = "+git" })
+
 keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "exit file" })
 
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "move highlighted lines DOWN" })
