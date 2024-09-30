@@ -26,7 +26,7 @@ return {
 			ensure_installed = {
 				"lua_ls",
 
-				"tsserver",
+				"ts_ls",
 				"eslint",
 
 				"html",
@@ -39,6 +39,8 @@ return {
         "emmet_language_server",
 
 				"rust_analyzer",
+
+        "nil_ls",
 			},
 			-- automatically install configures servers
 			automatic_installation = true, -- note the same as ensure_installed
